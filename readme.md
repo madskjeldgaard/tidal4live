@@ -8,6 +8,11 @@ Compared to a "normal" virtual midi connection between Tidal and Ableton, there
 are a few pros and cons to be considered before going this route instead of
 [tidal-midi](https://github.com/tidalcycles/tidal-midi).
 
+**Video: See tidal4live in action**
+
+[![](http://img.youtube.com/vi/nikrnjIup5M/0.jpg)](http://www.youtube.com/watch?v=nikrnjIup5M
+"")
+
 **Pros**
 * Easy to set up
 * Mapping Tidal parameters to any midi modulatable parameter in Ableton is easy
