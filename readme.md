@@ -17,6 +17,8 @@ are a few pros and cons to be considered before going this route instead of
 * Timing isn't super precise (but neither is tidal-midi's)
 
 ### Known issues
+tidal4live is in the experimental stage and as such is full of weird issues.
+Here are some of them:
 
 * Timing can be wonky (the m4l devices are actually rigged for time stamps but
   not using them yet)
