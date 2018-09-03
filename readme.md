@@ -10,8 +10,7 @@ are a few pros and cons to be considered before going this route instead of
 
 **Video: See tidal4live in action**
 
-[![](http://img.youtube.com/vi/nikrnjIup5M/0.jpg)](http://www.youtube.com/watch?v=nikrnjIup5M
-"")
+[![](http://img.youtube.com/vi/nikrnjIup5M/0.jpg)](https://youtu.be/R_NFiOVosno)
 
 **Pros**
 * Easy to set up
