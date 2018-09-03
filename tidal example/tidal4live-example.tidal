@@ -1,0 +1,42 @@
+-- 1. Import the Max Msp module which defines an osc stream and what to send + how
+-- It basically sends data off as a list of pairs (parameter, value) to the url /fromTidal/<streamNumber> 
+import Sound.Tidal.MaxMspOsc
+
+-- 2. Open up a connection
+--
+-- You can make as many of these connections as you want, just remember to
+-- choose an unused stream (or port) when you make a new one
+max1 <- maxmspStream "127.0.0.1" 8010 1 -- Destination ip (default is your own computer), port and streamNumber
+
+max2 <- maxmspStream "127.0.0.1" 8020 1 
+
+max3 <- maxmspStream "127.0.0.1" 8030 1
+
+-- 3. Start live coding
+
+max1 -- port 8010
+$ sometimesBy 0.1 (degrade)
+$ slow "<4 1 8>" 
+$ sometimesBy 0.5 (0.25 <~ )
+$ n "0 8 2 0 ~ 3 2" 
+# velocity "0.25 0.5 0.0 1.0"
+# fold (slow 12 $ saw)
+
+max1 silence
+
+max2 -- port 8020
+$ fast "<1 1 1 2 2 2 2 2 2 2 3 3>"
+$ n "0 8 2"
+# fold (scalex 0.25 1.0 $ slow 16 $ saw)
+# velocity (scale 0.5 1.0 $ slow 32 $ sine)
+|+| n 12
+
+max2 silence
+
+max3 -- port 8030
+$ slow 4
+$ n "0"
+|=| fold "0.5 0.1 0.75"
+|=| velocity (scale 0.75 1.0 $ saw)
+
+max3 silence
