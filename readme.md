@@ -1,4 +1,7 @@
-# Tidal4Live
+## DEPRECATED
+This was made for an earlier version of Tidal and has not been adjusted for the new osc workflow. I don't offer support to make it work either so please fork it if you feel like using it.
+
+## Tidal4Live
 ![](tidal4live.png)
 
 Tidal4Live consists two Max4Live devices that makes interaction with the
